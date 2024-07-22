@@ -42,12 +42,6 @@ endif(NOT APPLE)
 find_program(QT_LCONVERT_EXECUTABLE NAMES lconvert lconvert-qt4 PATHS ${QT_BINARY_DIR} NO_DEFAULT_PATH)
 find_program(QT_LCONVERT_EXECUTABLE NAMES lconvert lconvert-qt4)
 
-if(APPLE)
-  if(NOT QT_MAC_USE_COCOA)
-    message(FATAL_ERROR "Cocoa support is required")
-  endif(NOT QT_MAC_USE_COCOA)
-endif(APPLE)
-
 find_package(OpenGL REQUIRED)
 find_package(Boost REQUIRED)
 find_package(Gettext REQUIRED)
